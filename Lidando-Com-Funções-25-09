@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Validação de formulário</title>
+</head>
+<body>
+
+	<header>
+    	<h3>Validação de formulário</h1>
+    </header>
+    
+	<form method="post" action="">
+		<p>
+        <label for="nome">Nome: </label>
+		<input id="nome" type=text title="Nome"
+    required name=nome/> <br />
+    	<p>
+		<label for="email">Email: </label> <input
+    id="email" type=text required name=email/>
+    	<br><br/>
+		<button onclick="teste()">Enviar</button>
+	</form>
+    
+    <script>
+      var nome = document.querySelector(".nome");
+      var email = document.querySelector(".email");
+      
+      function teste(){
+        if(nome == null || email == null){
+        alert("Campo(s) não informado(s)")
+        return false;
+        }
+        return true;
+      }
+      
+    </script>
+</body>
+</html>
