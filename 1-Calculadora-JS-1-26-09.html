@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+    <header>
+        <h3>Calculadora</h3>
+    </header>
+    
+    <form>
+        <p>
+            <label>Número 1: </label>
+            <input id="n1" type="text" required>
+        </p>
+        <p>
+            <label>Número 2: </label>
+            <input id="n2" type="text" required>
+        </p>
+                
+        <button type="button" onclick="somar()">Somar</button>
+        <button type="button" onclick="subtracao()">Subtração</button>
+        <button type="button" onclick="multiplicacao()">Multiplicação</button>
+        <button type="button" onclick="divisao()">Divisão</button>
+    </form>
+    
+    <p id="total">
+        
+    </p>
+    
+    <script>
+        var n1
+        function somar() {
+            n1 = parseFloat(document.getElementById("n1").value);
+            var n2 = parseFloat(document.getElementById("n2").value);
+            
+            if (isNaN(n1) || isNaN(n2)) {
+                alert("Por favor, insira números válidos.");
+                return;
+            }
+            
+            var total = n1 + n2;
+            document.getElementById("total").innerText = "A Soma é: " + total;
+        }
+        function subtracao() {
+            n1 = parseFloat(document.getElementById("n1").value);
+            n2 = parseFloat(document.getElementById("n2").value);
+            
+            if (isNaN(n1) || isNaN(n2)) {
+                alert("Por favor, insira números válidos.");
+                return;
+            }
+            
+            var total = n1 - n2;
+            document.getElementById("total").innerText = "A Subtração é: " + total;
+        }
+        function multiplicacao() {
+            n1 = parseFloat(document.getElementById("n1").value);
+            n2 = parseFloat(document.getElementById("n2").value);
+            
+            if (isNaN(n1) || isNaN(n2)) {
+                alert("Por favor, insira números válidos.");
+                return;
+            }
+            
+            var total = n1 * n2;
+            document.getElementById("total").innerText = "A Multiplicação é: " + total;
+        }
+        function divisao() {
+            n1 = parseFloat(document.getElementById("n1").value);
+            n2 = parseFloat(document.getElementById("n2").value);
+            
+            if (isNaN(n1) || isNaN(n2)) {
+                alert("Por favor, insira números válidos.");
+                return;
+            }
+            
+            var total = n1 / n2;
+            document.getElementById("total").innerText = "A Divisão é: " + total;
+        }
+    </script>
+</body>
+</html>
